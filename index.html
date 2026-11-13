@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fasya Failasufa — Portfolio</title>
+<meta name="description" content="Portfolio Fasya Failasufa — Social Media, Content Creator & Marcom. Penna Works, DWM Production, Telkomsel, Alya, Kaelon, Maminoq.">
+<meta name="keywords" content="Fasya Failasufa, Portfolio, Social Media, Content Creator, Marcom, Penna Works, DWM Production, Telkomsel, Gresik">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#E7F6F2;color:#2C3333}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:#2C3333;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.top b{font-size:20px;letter-spacing:.5px}
+.top b span{color:#A5C9CA}
+.nav{display:flex;gap:16px;font-size:14px;align-items:center}
+.nav a{opacity:.9}
+.lang button{border:1px solid #A5C9CA;background:transparent;color:#fff;padding:6px 12px;border-radius:999px;cursor:pointer;font-weight:700}
+.lang button.active{background:#A5C9CA;color:#2C3333}
+.hero{background:#2C3333;color:#fff;padding:36px 20px 60px;text-align:center;border-radius:0 0 40px 40px}
+.hero img{width:150px;height:150px;object-fit:cover;border-radius:50%;border:4px solid #A5C9CA;background:#fff}
+.hero h1{font-size:32px;margin:14px 0 6px}
+.hero p{opacity:.85;max-width:650px;margin:0 auto;line-height:1.6}
+.pill{display:inline-flex;gap:8px;margin-top:18px;background:#395B64;padding:8px;border-radius:999px}
+.pill a{background:#fff;color:#2C3333;padding:8px 16px;border-radius:999px;font-weight:700;font-size:13px}
+.pill a.dark{background:#A5C9CA}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 18px 60px}
+h2{font-size:22px;margin:28px 0 14px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.06);cursor:pointer}
+.card .thumb{height:170px;background:#A5C9CA;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card .thumb img{width:100%;height:100%;object-fit:cover}
+.card .thumb .logo{width:110px;height:110px;object-fit:contain;background:#fff;border-radius:16px;padding:10px}
+.card .body{padding:14px 16px}
+.card b{font-size:16px}
+.card p{font-size:13px;color:#555;margin-top:6px;line-height:1.5}
+.badge{display:inline-block;background:#E7F6F2;color:#395B64;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;margin-top:8px}
+.exp{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.exp-card{background:#fff;border-radius:20px;padding:18px;display:flex;gap:14px;align-items:flex-start}
+.exp-card img{width:64px;height:64px;object-fit:contain;background:#f3f3f3;border-radius:14px;padding:6px;flex-shrink:0}
+.exp-card b{font-size:15px}
+.exp-card p{font-size:13px;color:#555;line-height:1.5;margin-top:4px}
+.btn{display:inline-block;background:#2C3333;color:#fff;padding:10px 18px;border-radius:999px;font-weight:700;font-size:14px;margin-top:12px}
+/* Detail Page */
+.detail{display:none}
+.detail.active{display:block}
+.back{background:#fff;border:1px solid #ddd;padding:8px 16px;border-radius:999px;cursor:pointer;font-weight:700}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:16px}
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;background:#fff;cursor:pointer}
+.gallery video{width:100%;border-radius:14px;background:#000;aspect-ratio:9/16;object-fit:cover}
+.footer{text-align:center;padding:30px 16px;color:#666;font-size:13px}
+@media(max-width:600px){.nav a{display:none}.hero h1{font-size:26px}}
+</style>
+</head>
+<body>
 
+<div class="top">
+  <b>FASYA <span>FAILASUFA</span></b>
+  <div class="nav">
+    <a href="#" onclick="showHome()">Home</a>
+    <a href="#" onclick="showHome()">Karya</a>
+    <div class="lang"><button id="btn-id" class="active" onclick="setLang('id')">ID</button> <button id="btn-en" onclick="setLang('en')">EN</button></div>
+  </div>
+</div>
+
+<!-- HOME -->
+<div id="home">
+  <div class="hero">
+    <img src="foto-fasya.png" alt="Fasya Failasufa">
+    <h1 data-id="Halo, Saya Fasya Failasufa" data-en="Hello, I'm Fasya Failasufa">Halo, Saya Fasya Failasufa</h1>
+    <p data-id="Lulusan Ilmu Komunikasi yang mengelola media sosial, konten, dan dokumentasi acara — dari content plan sampai laporan. Mengelola 5 brand di Penna Works, dokumentasi event di DWM Production, dan magang PR & Media di Telkomsel Bangkalan." data-en="Communication graduate managing social media, content, and event documentation — from content plan to report. Managed 5 brands at Penna Works, event documentation at DWM Production, and PR & Media internship at Telkomsel Bangkalan.">Lulusan Ilmu Komunikasi yang mengelola media sosial, konten, dan dokumentasi acara — dari content plan sampai laporan. Mengelola 5 brand di Penna Works, dokumentasi event di DWM Production, dan magang PR & Media di Telkomsel Bangkalan.</p>
+    <div class="pill"><a href="#karya">Lihat Karya ↓</a><a class="dark" href="https://wa.me/6281234567890" target="_blank">Hubungi Saya</a></div>
+  </div>
+
+  <div class="wrap">
+    <h2 data-id="Pengalaman" data-en="Experience">Pengalaman</h2>
+    <div class="exp">
+      <div class="exp-card"><img src="penna-logo.jpg"><div><b>Penna Works</b><p data-id="Admin & Social Media — Mengelola 5 brand, content plan, desain & laporan." data-en="Admin & Social Media — Managed 5 brands, content plan, design & report.">Admin & Social Media — Mengelola 5 brand, content plan, desain & laporan.</p></div></div>
+      <div class="exp-card"><img src="dwm-logo.png"><div><b>DWM Production</b><p data-id="Admin & Dokumentasi — Dokumentasi event, foto & video." data-en="Admin & Documentation — Event documentation, photo & video.">Admin & Dokumentasi — Dokumentasi event, foto & video.</p></div></div>
+      <div class="exp-card"><img src="telkomsel-logo.png"><div><b>Telkomsel Bangkalan</b><p data-id="PR & Media — Magang, konten & relasi media." data-en="PR & Media — Internship, content & media relations.">PR & Media — Magang, konten & relasi media.</p></div></div>
+      <div class="exp-card"><img src="kampus%20mengajar-logo.jpg"><div><b>Kampus Mengajar</b><p data-id="Program Kampus Mengajar — Edukasi & dokumentasi kegiatan sekolah." data-en="Kampus Mengajar Program — Education & school activity documentation.">Program Kampus Mengajar — Edukasi & dokumentasi kegiatan sekolah.</p></div></div>
+      <div class="exp-card"><img src="ruang%20telisik-logo.png"><div><b>Ruang Telisik</b><p data-id="Konten & Media — Riset, konten edukasi & dokumentasi." data-en="Content & Media — Research, educational content & documentation.">Konten & Media — Riset, konten edukasi & dokumentasi.</p></div></div>
+    </div>
+
+    <h2 id="karya" data-id="Karya Pilihan" data-en="Selected Works">Karya Pilihan</h2>
+    <div class="card-grid">
+      <div class="card" onclick="go('alya')"><div class="thumb"><img class="logo" src="alya-logo.jpeg"></div><div class="body"><b>Alya Beauty Care</b><p data-id="3 Video Promosi" data-en="3 Promo Videos">3 Video Promosi</p><span class="badge">VIDEO • PENNA WORKS</span></div></div>
+      <div class="card" onclick="go('kaelon')"><div class="thumb"><img src="foto-fasya.png"></div><div class="body"><b>Kaelon</b><p data-id="2 Video" data-en="2 Videos">2 Video</p><span class="badge">VIDEO • PENNA WORKS</span></div></div>
+      <div class="card" onclick="go('maminoq')"><div class="thumb"><img src="maminoq1.png"></div><div class="body"><b>Maminoq Kue</b><p data-id="11 Foto Menu + Video" data-en="11 Menu Photos + Video">11 Foto Menu + Video</p><span class="badge">FOTO MENU • PENNA WORKS</span></div></div>
+      <div class="card" onclick="go('telkomsel')"><div class="thumb"><img class="logo" src="telkomsel-logo.png"></div><div class="body"><b>Telkomsel</b><p data-id="2 Video Dokumentasi" data-en="2 Documentation Videos">2 Video Dokumentasi</p><span class="badge">VIDEO • MAGANG</span></div></div>
+      <div class="card" onclick="go('dwm')"><div class="thumb"><img class="logo" src="dwm-logo.png"></div><div class="body"><b>DWM Production</b><p data-id="Dokumentasi Event & 17 Agustus" data-en="Event Documentation & 17 August">Dokumentasi Event & 17 Agustus</p><span class="badge">DOKUMENTASI</span></div></div>
+      <div class="card" onclick="go('kampus')"><div class="thumb"><img class="logo" src="kampus%20mengajar-logo.jpg"></div><div class="body"><b>Kampus Mengajar</b><p data-id="Dokumentasi & Kegiatan Sekolah" data-en="Documentation & School Activities">Dokumentasi & Kegiatan Sekolah</p><span class="badge">EDUKASI</span></div></div>
+      <div class="card" onclick="go('ruang')"><div class="thumb"><img class="logo" src="ruang%20telisik-logo.png"></div><div class="body"><b>Ruang Telisik</b><p data-id="Konten & Dokumentasi" data-en="Content & Documentation">Konten & Dokumentasi</p><span class="badge">MEDIA</span></div></div>
+    </div>
+
+    <h2 data-id="Tentang Saya" data-en="About Me">Tentang Saya</h2>
+    <div class="exp-card"><div><b data-id="Fasya Failasufa — Gresik, Jawa Timur" data-en="Fasya Failasufa — Gresik, East Java">Fasya Failasufa — Gresik, Jawa Timur</b><p data-id="S1 Ilmu Komunikasi, Universitas Trunojoyo Madura. Terbiasa membuat content plan, desain menu, foto produk, video promosi, hingga laporan media sosial. Saya percaya konten yang baik itu rapi, konsisten, dan mudah dipahami." data-en="Bachelor of Communication, Universitas Trunojoyo Madura. Skilled in content plan, menu design, product photo, promo video, and social media reporting. I believe good content is neat, consistent, and easy to understand.">S1 Ilmu Komunikasi, Universitas Trunojoyo Madura. Terbiasa membuat content plan, desain menu, foto produk, video promosi, hingga laporan media sosial. Saya percaya konten yang baik itu rapi, konsisten, dan mudah dipahami.</p><a class="btn" href="https://wa.me/6281234567890" target="_blank">WhatsApp Saya →</a></div></div>
+  </div>
+</div>
+
+<!-- DETAIL PAGES -->
+<div class="wrap detail" id="detail-alya">
+  <button class="back" onclick="showHome()">← Kembali</button>
+  <h2>Alya Beauty Care — 3 Video</h2><p>Video promosi Alya Beauty Care.</p>
+  <div class="gallery"><video controls src="alya1.mp4"></video><video controls src="alya2.mp4"></video><video controls src="alya3.mp4"></video></div>
+</div>
+
+<div class="wrap detail" id="detail-kaelon">
+  <button class="back" onclick="showHome()">← Kembali</button>
+  <h2>Kaelon — 2 Video</h2><p>Video Kaelon.</p>
+  <div class="gallery"><video controls src="kaelon.mp4"></video><video controls src="kaelon1.mp4"></video></div>
+</div>
+
+<div class="wrap detail" id="detail-maminoq">
+  <button class="back" onclick="showHome()">← Kembali</button>
+  <h2>Maminoq Kue — Menu 1-11</h2><p>11 Foto Menu Maminoq Kue.</p>
+  <div class="gallery">
+    <img src="maminoq1.png"><img src="maminoq2.png"><img src="maminoq3.png"><img src="maminoq4.png"><img src="maminoq5.png"><img src="maminoq6.png"><img src="maminoq7.png"><img src="maminoq8.png"><img src="maminoq9.png"><img src="maminoq10.png"><img src="maminoq11.png">
+  </div>
+</div>
+
+<div class="wrap detail" id="detail-telkomsel">
+  <button class="back" onclick="showHome()">← Kembali</button>
+  <h2>Telkomsel — 2 Video</h2><p>Dokumentasi Telkomsel Bangkalan.</p>
+  <div class="gallery"><video controls src="telkomsel1.mp4"></video><video controls src="telkomsel2.mp4"></video></div>
+</div>
+
+<div class="wrap detail" id="detail-dwm">
+  <button class="back" onclick="showHome()">← Kembali</button>
+  <h2>DWM Production</h2><p>Dokumentasi event DWM Production & 17 Agustus.</p>
+  <div class="gallery"><img src="dwm-logo.png"></div>
+</div>
+
+<div class="wrap detail" id="detail-kampus">
+  <button class="back" onclick="showHome()">← Kembali</button>
+  <h2>Kampus Mengajar</h2><p>Dokumentasi kegiatan Kampus Mengajar.</p>
+  <div class="gallery"><img src="kampus%20mengajar-logo.jpg"></div>
+</div>
+
+<div class="wrap detail" id="detail-ruang">
+  <button class="back" onclick="showHome()">← Kembali</button>
+  <h2>Ruang Telisik</h2><p>Konten & dokumentasi Ruang Telisik.</p>
+  <div class="gallery"><img src="ruang%20telisik-logo.png"></div>
+</div>
+
+<div class="footer">© 2026 Fasya Failasufa — Portfolio • Gresik, Jawa Timur</div>
+
+<script>
+let lang='id';
+function setLang(l){
+  lang=l;
+  document.getElementById('btn-id').classList.toggle('active',l==='id');
+  document.getElementById('btn-en').classList.toggle('active',l==='en');
+  document.querySelectorAll('[data-id]').forEach(el=>{ el.textContent = el.getAttribute(l==='id'?'data-id':'data-en'); });
+  localStorage.setItem('fasya-lang',l);
+}
+function go(id){
+  document.getElementById('home').style.display='none';
+  document.querySelectorAll('.detail').forEach(d=>d.classList.remove('active'));
+  document.getElementById('detail-'+id).classList.add('active');
+  window.scrollTo(0,0);
+}
+function showHome(){
+  document.getElementById('home').style.display='block';
+  document.querySelectorAll('.detail').forEach(d=>d.classList.remove('active'));
+  window.scrollTo(0,0);
+}
+let saved=localStorage.getItem('fasya-lang'); if(saved) setLang(saved);
+</script>
+</body>
+</html>
